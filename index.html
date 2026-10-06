@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Share to Clipboard</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#111827">
+  <link rel="icon" href="icons/icon-192.png">
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #111827; color: #f9fafb; font: 18px system-ui, sans-serif; text-align: center; }
+    main { padding: 24px; max-width: 28rem; }
+    #status { font-size: 1.4rem; margin-bottom: 16px; }
+    #preview { max-width: 100%; max-height: 40vh; border-radius: 8px; margin-bottom: 16px; }
+    button { font: inherit; padding: 16px 32px; border: 0; border-radius: 12px; background: #3b82f6; color: #fff; }
+    [hidden] { display: none; }
+    p.hint { color: #9ca3af; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="status">Share something to this app to copy it.</div>
+    <img id="preview" alt="" hidden>
+    <button id="copy" hidden>Copy</button>
+    <p class="hint" id="hint">Install this app, then pick it from any “Share with…” menu.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
